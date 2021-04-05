@@ -4,12 +4,12 @@
 {% load static %}
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md">
+      <div class="col-md-6">
         <img src="{% static 'images/dancers.png' %}" alt="" class="dancers">
       </div>
-      <div class="col-md login-form">
+      <div class="col-md-6 login-form">
         <h3>User Log In Form</h3>
-        <form class="" action="#" method="post">
+        <form class="" action="{% url 'manager' %}" method="post">
           {% csrf_token %}
           {{loginform.username|as_crispy_field}}
           {{loginform.password|as_crispy_field}}

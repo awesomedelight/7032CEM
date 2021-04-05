@@ -19,4 +19,5 @@ from dancerapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.login, name='login'),
+    path('manager', views.manager, name='manager'),
 ]
